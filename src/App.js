@@ -1,24 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import ModuleApolloProvider from "./modules/mod-apollo-client";
+import ModuleRoute from "./modules/mod-route";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ModuleApolloProvider>
+      <ModuleRoute />
+    </ModuleApolloProvider>
   );
 }
 
